@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                Document doc= (Document)Jsoup.connect(URL).timeout(30*1000).get();
+                org.jsoup.nodes.Document doc= Jsoup.connect(URL).timeout(30*1000).get();
 
                 Elements haber= doc.select("figcaption");
 
